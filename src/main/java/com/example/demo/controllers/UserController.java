@@ -17,6 +17,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/healthcheck/romy")
+    public String healthCheck() {
+        String message = "Romy hermosa de mi cora ♥️ jajajaja. Funciona!";
+        return message;
+    }
     @GetMapping
     public ArrayList<UserModel> getUser() {
         return this.userService.getUsers();
